@@ -22,6 +22,7 @@ class App extends Component {
 		}
 		//  humain setState ko componentDidUpdate me bina condition ke call nahi karna chahiye warna ye infinte loop me chala jata hai
 		// console.log(this.setState({ count: this.state.count + 1 }));
+		// we can call api inside componentDidUpdate but call it only conditional statement
 	}
 
 	render() {
