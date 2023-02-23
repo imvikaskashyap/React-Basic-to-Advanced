@@ -44,3 +44,5 @@ class App extends Component {
 }
 
 export default App;
+
+// can we make more of one render method inside a function or component ?

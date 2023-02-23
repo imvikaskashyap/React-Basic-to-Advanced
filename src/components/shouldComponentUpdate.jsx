@@ -45,4 +45,6 @@ class App extends Component {
 	}
 }
 
+// Note : shouldComponentUpdate & didComponentUpdate me se shouldComponentUpdate pehle call hoga .
+
 export default App;
