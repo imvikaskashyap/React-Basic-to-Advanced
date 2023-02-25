@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Map from "./components/Map";
+import PureComponentFunc from "./components/PureComponentFunc";
 
 const App = () => {
 	return (
 		<div>
-			<Map />
+			<PureComponentFunc />
 		</div>
 	);
 };

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "react-bootstrap";
+import ReuseComponent from "./ReuseComponent";
 
 const Map = () => {
 	// const person = ["vk", "sk", "dk", "jk"];
+	const [count, setCount] = useState(0);
 
 	const person = [
 		{
@@ -31,34 +33,104 @@ const Map = () => {
 		},
 	];
 
+	//  nested map
+	// const users = [
+	// 	{
+	// 		name: "Anil",
+	// 		email: "anil@test.com",
+	// 		address: [
+	// 			{ hm: "101", city: "Noida", country: "India" },
+	// 			{ hm: "10", city: "Gurgaon", country: "India" },
+	// 			{ hm: "23", city: "Noida", country: "India" },
+	// 			{ hm: "45", city: "Delhi", country: "India" },
+	// 		],
+	// 	},
+	// 	{
+	// 		name: "Burce",
+	// 		email: "bruce@test.com",
+	// 		address: [
+	// 			{ hm: "101", city: "Noida", country: "India" },
+	// 			{ hm: "10", city: "Gurgaon", country: "India" },
+	// 			{ hm: "23", city: "Noida", country: "India" },
+	// 			{ hm: "45", city: "Delhi", country: "India" },
+	// 		],
+	// 	},
+	// 	{
+	// 		name: "Peter",
+	// 		email: "peter@test.com",
+	// 		address: [
+	// 			{ hm: "101", city: "Noida", country: "India" },
+	// 			{ hm: "10", city: "Gurgaon", country: "India" },
+	// 			{ hm: "23", city: "Noida", country: "India" },
+	// 			{ hm: "45", city: "Delhi", country: "India" },
+	// 		],
+	// 	},
+	// 	{
+	// 		name: "Sam",
+	// 		email: "sam@test.com",
+	// 		address: [
+	// 			{ hm: "101", city: "Noida", country: "India" },
+	// 			{ hm: "10", city: "Gurgaon", country: "India" },
+	// 			{ hm: "23", city: "Noida", country: "India" },
+	// 			{ hm: "45", city: "Delhi", country: "India" },
+	// 		],
+	// 	},
+	// ];
+
+	const alertFun = () => {
+		setCount(count + 1);
+		console.log("This is alert function from parent component");
+	};
 	return (
+		// <div>
+		// 	<h1>Map function</h1>
+		// 	{/* {person.map((item) => (
+		// 		<h1> Name : {item}</h1>
+		// 	))} */}
+
+		// 	<Table variant="dark" striped>
+		// 		<tbody>
+		// 			<tr>
+		// 				<th>Id</th>
+		// 				<th>Name</th>
+
+		// 				<th>Email</th>
+		// 				<th>Address</th>
+		// 			</tr>
+		// 		</tbody>
+
+		// 		{users.map((data, i) => (
+		// 			<tbody key={i}>
+		// 				<tr>
+		// 					<td> {i + 1}</td>
+		// 					<td> {data.name}</td>
+
+		// 					<td> {data.email}</td>
+		// 					<td>
+		// 						{data.address.map((item, i) => (
+		// 							<Table variant="dark" striped>
+		// 								<tbody>
+		// 									<tr>
+		// 										<td>{item.city}</td>
+		// 										<td>{item.country}</td>
+		// 										<td>{item.hm}</td>
+		// 									</tr>
+		// 								</tbody>
+		// 							</Table>
+		// 						))}
+		// 					</td>
+		// 				</tr>
+		// 			</tbody>
+		// 		))}
+		// 	</Table>
+		// </div>
+
+		//  Reuse component by Map
+
 		<div>
-			<h1>Map function</h1>
-			{/* {person.map((item) => (
-				<h1> Name : {item}</h1>
-			))} */}
-
-			<Table border="1">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Age</th>
-						<th>Mob</th>
-						<th>Email</th>
-					</tr>
-				</thead>
-
-				{person.map((data) => (
-					<tbody>
-						<tr>
-							<td> {data.name}</td>
-							<td>{data.age}</td>
-							<td> {data.mob}</td>
-							<td> {data.email}</td>
-						</tr>
-					</tbody>
-				))}
-			</Table>
+			{person.map((item, i) => (
+				<ReuseComponent count={count} item={item} alertFun={alertFun} />
+			))}
 		</div>
 	);
 };
