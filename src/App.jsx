@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import PureComponentFunc from "./components/PureComponentFunc";
-
+import UncontrolledComp from "./components/UncontrolledComp";
 const App = () => {
 	return (
 		<div>
-			<PureComponentFunc />
+			<UncontrolledComp />
 		</div>
 	);
 };

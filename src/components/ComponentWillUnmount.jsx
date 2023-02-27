@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import "./App.css";
+
 import Student from "./WillUnmount";
 
 class App extends Component {
@@ -34,3 +34,5 @@ class App extends Component {
 }
 
 export default App;
+
+// Note : yaha pe jab hum student component ko toggle kar rahe h tab ye delete ho ja raha h or jab again toggle karte h tab ye new banta hai, old wala delete ho jata hai permanately.

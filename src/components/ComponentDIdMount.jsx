@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-import "./App.css";
 
 class App extends Component {
 	constructor() {
@@ -9,6 +8,7 @@ class App extends Component {
 		this.state = {
 			name: "VIkas",
 		};
+		console.log("constructor");
 	}
 
 	// componentDidMount called when 1st constructor called 2nd render called after that componentDidMount called
@@ -20,6 +20,7 @@ class App extends Component {
 	}
 
 	render() {
+		console.log("render");
 		// console.log(this.setState({ name: "Kashyap" })); very dangerous => infinite  looping
 		return (
 			<div>

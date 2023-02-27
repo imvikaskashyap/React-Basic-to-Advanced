@@ -12,18 +12,17 @@ class App extends Component {
 		console.log("constructor");
 	}
 
-	//we call shouldComponentUpdate when we want that, humain state update karani hai ya nhi. iska default behaviour false rehta h, iska matlab shouldComponentUpdate call karne pe state to update hogi but woh render nhi hogi(shouldComponentUpdate block the render function). yadi humain render karna h tab shouldComponentUpdate ke andar return true karna hoga.
+	//we call shouldComponentUpdate when we want that humain state update karani hai ya nhi. iska default behaviour false rehta h, iska matlab shouldComponentUpdate call karne pe state to update hogi but woh render nhi hogi(shouldComponentUpdate block the render function). yadi humain render karna h tab shouldComponentUpdate ke andar return true karna hoga.
 	//  shouldComponentUpdate ka use conditional updation ke liye hota h
 
 	shouldComponentUpdate() {
 		// yaha hum dekh sakte h ki state to update ho rhi h kintu render nhi ho rahi hai.
 		console.log("shouldComponentUpdate", this.state.count);
-
 		// render karne ke liye return ture karna hoga.
+
 		// return true;
 
 		// yaha hum conditon ke through update kara sakte h
-
 		if (this.state.count <= 10) {
 			return true;
 		}
@@ -45,6 +44,6 @@ class App extends Component {
 	}
 }
 
-// Note : shouldComponentUpdate & didComponentUpdate me se shouldComponentUpdate pehle call hoga .
-
 export default App;
+
+// Note : shouldComponentUpdate & didComponentUpdate me se shouldComponentUpdate pehle call hoga .

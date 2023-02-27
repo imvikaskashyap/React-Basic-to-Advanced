@@ -1,86 +1,91 @@
 import React, { useState } from "react";
 
 const FormValidation = () => {
-	// const [username, setUsername] = useState("");
-	// const [Password, setPassword] = useState("");
-	// const [errMsg, setErrMsg] = useState(false);
+	// 	const [username, setUsername] = useState("");
+	// 	const [password, setPassword] = useState("");
+	// 	const [usernameErrMsg, setUsernameErrMsg] = useState(false);
+	// 	const [passwordErrMsg, setPasswordErrMsg] = useState(false);
 
-	// const getFormDetails = (e) => {
-	// 	e.preventDefault();
-	// };
+	// 	const getFormDetails = (e) => {
+	// 		if (username.length < 3 || password.length < 8) {
+	// 			alert("please type full length in input");
+	// 		} else {
+	// 			alert("welcome to home page");
+	// 		}
 
-	// const getUsername = (e) => {
-	// 	let username = e.target.value;
-	// 	if (username.length < 3) {
-	// 		setErrMsg(true);
+	// 		e.preventDefault();
+	// 	};
+
+	// 	const getUserName = (e) => {
+	// 		let username = e.target.value;
+
+	// 		if (username.length < 3) {
+	// 			setUsernameErrMsg(true);
+	// 		} else {
+	// 			setUsernameErrMsg(false);
+	// 		}
 	// 		setUsername(username);
-	// 	} else {
-	// 		setErrMsg(false);
-	// 	}
-	// };
+	// 	};
 
-	// const getPassword = (e) => {
-	// 	let password = e.target.value;
-	// 	if (password.length < 8) {
-	// 		setErrMsg(true);
+	// 	const getPassword = (e) => {
+	// 		let password = e.target.value;
+
+	// 		if (password.length < 8) {
+	// 			setPasswordErrMsg(true);
+	// 		} else {
+	// 			setPasswordErrMsg(false);
+	// 		}
+
 	// 		setPassword(password);
-	// 	} else {
-	// 		setErrMsg(false);
-	// 	}
-	// };
+	// 	};
 
-	// return (
-	// 	<div>
-	// 		<form onSubmit={getFormDetails}>
-	// 			<input
-	// 				type="text"
-	// 				placeholder="Enter your Name"
-	// 				onChange={getUsername}
-	// 			/>
-	// 			{errMsg ? <p>Username length should not less than 3 </p> : ""}
-	// 			<br />
-	// 			<br />
-	// 			<input
-	// 				type="text"
-	// 				placeholder="Enter your Password"
-	// 				onChange={getPassword}
-	// 			/>
-	// 			{errMsg ? <p>Password length should not less than 8 </p> : ""}
-	// 			<br />
-	// 			<br />
-	// 			<button type="submit">Submit</button>
-	// 		</form>
-	// 	</div>
-	// );
+	// 	return (
+	// 		<div>
+	// 			<form onSubmit={getFormDetails}>
+	// 				<input type="text" placeholder="name" onChange={getUserName} />
+	// 				{usernameErrMsg ? (
+	// 					<p>Username should not less than 3 character</p>
+	// 				) : null}
+	// 				<br />
+	// 				<br />
+	// 				<input type="password" placeholder="password" onChange={getPassword} />
+	// 				{passwordErrMsg ? (
+	// 					<p>Password should not less than 8 character</p>
+	// 				) : null}
+	// 				<br />
+	// 				<br />
+	// 				<button type="submit">Log In</button>
+	// 			</form>
+	// 		</div>
+	// 	);
 
-	const [username, setUsername] = useState("");
+	const [userName, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [usernameErrMsg, setUsernameErrMsg] = useState(false);
 	const [passwordErrMsg, setPasswordErrMsg] = useState(false);
 
-	const getFormDetails = (e) => {
-		if (username.length < 3 || password.length < 8) {
-			alert("please type full length in input");
-		} else {
-			alert("welcome to home page");
-		}
-
+	const handleSubmit = (e) => {
 		e.preventDefault();
+		if (userName.length < 3 || password.length < 8) {
+			alert("please enter coorectly");
+		}
 	};
 
-	const getUserName = (e) => {
-		let username = e.target.value;
+	const handleUsername = (e) => {
+		const userName = e.target.value;
+		console.log(e.target.value);
 
-		if (username.length < 3) {
+		if (userName.length < 3) {
 			setUsernameErrMsg(true);
 		} else {
 			setUsernameErrMsg(false);
 		}
-		setUsername(username);
-	};
 
-	const getPassword = (e) => {
-		let password = e.target.value;
+		setUsername(userName);
+	};
+	const handlePassword = (e) => {
+		const password = e.target.value;
+		console.log(e.target.value);
 
 		if (password.length < 8) {
 			setPasswordErrMsg(true);
@@ -93,17 +98,17 @@ const FormValidation = () => {
 
 	return (
 		<div>
-			<form onSubmit={getFormDetails}>
-				<input type="text" placeholder="name" onChange={getUserName} />
-				{usernameErrMsg ? (
-					<p>Username should not less than 3 character</p>
-				) : null}
+			<form onSubmit={handleSubmit}>
+				<input type="text" placeholder="Enter name" onChange={handleUsername} />
+				{usernameErrMsg ? <p>name should be grater than 3 char</p> : null}
 				<br />
 				<br />
-				<input type="password" placeholder="password" onChange={getPassword} />
-				{passwordErrMsg ? (
-					<p>Password should not less than 8 character</p>
-				) : null}
+				<input
+					type="password"
+					placeholder="Enter password"
+					onChange={handlePassword}
+				/>
+				{passwordErrMsg ? <p>name should be grater than 8 char</p> : null}
 				<br />
 				<br />
 				<button type="submit">Log In</button>

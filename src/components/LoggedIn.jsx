@@ -16,3 +16,5 @@ const LoggedIn = () => {
 };
 
 export default LoggedIn;
+
+// we can use ternary operator in many if else conditions

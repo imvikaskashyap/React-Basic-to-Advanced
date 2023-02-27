@@ -11,3 +11,7 @@ export default class PureComponentFunc_child extends PureComponent {
 		);
 	}
 }
+
+// Note: Pure component prevent re rendering but with condition. condition is below
+// if previous data & present data are same then it check it & prevent the rerendering
+//  but if previous data & presenet data are not same then it re render.

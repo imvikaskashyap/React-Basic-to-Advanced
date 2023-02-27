@@ -21,3 +21,5 @@ class App extends Component {
 }
 
 export default App;
+
+// Note : Here we are passing props in class components & getting this props inside student component.

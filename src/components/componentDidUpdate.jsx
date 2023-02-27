@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-import "./App.css";
 
 class App extends Component {
 	constructor() {
@@ -22,7 +21,7 @@ class App extends Component {
 		}
 		//  humain setState ko componentDidUpdate me bina condition ke call nahi karna chahiye warna ye infinte loop me chala jata hai
 		// console.log(this.setState({ count: this.state.count + 1 }));
-		// we can call api inside componentDidUpdate but call it only conditional statement
+		// we can call api inside componentDidUpdate but call it only in conditional statement
 	}
 
 	render() {
@@ -46,3 +45,4 @@ class App extends Component {
 export default App;
 
 // can we make more of one render method inside a function or component ?
+// yes.

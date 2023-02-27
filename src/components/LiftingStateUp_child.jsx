@@ -2,7 +2,11 @@ import React from "react";
 
 const LiftingStateUp_child = (props) => {
 	//  we can send string,object, arrays etc.
-	const name2 = "Vkashyap";
+	// const name2 = "Vkashyap";
+	const name2 = {
+		name: "vikas",
+		age: 23,
+	};
 
 	return (
 		<div>

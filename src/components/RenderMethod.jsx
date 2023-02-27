@@ -15,7 +15,7 @@ class RenderMethod extends Component {
 			<div>
 				<h1>Render Method </h1>
 				<h1>{this.state.email}</h1>
-				{/* <h1>{this.props.name}</h1> */}
+				<h1>{this.props.name}</h1>
 				<button onClick={() => this.setState({ email: "vikas@yahoo.com" })}>
 					update email
 				</button>
@@ -30,7 +30,7 @@ export default RenderMethod;
 
 import React, { useState } from "react";
 import "./App.css";
-import RenderMethod from "./RenderMethod";
+import RenderMethod from "./components/RenderMethod";
 
 const App = () => {
 	const [name, setName] = useState("vikas ");
