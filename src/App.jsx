@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import React_router from "./React-Router-dom/React_router";
+import Params from "./React-Router-dom/Params";
 
 const App = () => {
 	return (
 		<div>
-			<React_router />
+			<Params />
 		</div>
 	);
 };
