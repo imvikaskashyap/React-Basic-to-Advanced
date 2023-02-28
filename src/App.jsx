@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import UncontrolledComp from "./components/UncontrolledComp";
+import React_router from "./React-Router-dom/React_router";
+
 const App = () => {
 	return (
 		<div>
-			<UncontrolledComp />
+			<React_router />
 		</div>
 	);
 };

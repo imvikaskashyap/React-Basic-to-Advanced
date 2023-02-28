@@ -38,3 +38,6 @@ export default UncontrolledComp;
 
 // Note : we can't use state to change input values inside uncontrolled component.
 // we can use useRef or other methods like getElementById.
+
+// Q - yadi ek component me state or useRef or getElementById  se input field operate ho rahe ho to woh kon sa componenet kehlayega. Controlled Component or Uncontrolled component.
+// A- Uncontrolled component.
