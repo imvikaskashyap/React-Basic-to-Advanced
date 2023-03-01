@@ -1,9 +1,26 @@
 * {
 	margin: 0;
 }
-body {
+/* body {
 	display: flex;
 	justify-content: center;
 	height: 100vh;
 	align-items: center;
+} */
+
+header {
+	background-color: black;
+	height: 65px;
+	padding: 30px;
+	text-align: right;
+}
+
+.link1 {
+	text-decoration: none;
+	color: white;
+	margin-left: 20px;
+}
+
+.active {
+	color: green;
 }

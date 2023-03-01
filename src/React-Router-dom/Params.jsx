@@ -2,18 +2,36 @@ import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import User from "./User";
 import UserAllLinks from "./UserAllLinks";
+import Navbar1 from "./Navbar";
+import React_router_about from "./React_router_about";
+import SearchParams from "./SearchParams";
+import Home from "./Home";
+import NavigateF from "./NavigateF";
+import Contact from "./Contact";
+import Company from "./Company";
+import OurEmployees from "./OurEmployees";
+import Others from "./Others";
 
 const Params = () => {
 	return (
 		<div>
 			<BrowserRouter>
-				<Link to="/UserAllLinks">User</Link>
+				{/* <Link to="/user">User</Link> */}
+				<Navbar1 />
+				<Link to="/userAllLinks">Users</Link>
 				<Routes>
-					<Route path="/UserAllLinks" element={<UserAllLinks />} />
+					<Route path="/" element={<Home />} />
+					<Route path="/userAllLinks" element={<UserAllLinks />} />
+					<Route path="/about" element={<React_router_about />} />
 
-					<Route path="/user/:name" element={<User />} />
-
-					<Route path="/user/:name" element={<User />} />
+					<Route path="/user/:name/:age" element={<User />} />
+					<Route path="/filter" element={<SearchParams />} />
+					<Route path="/navigate" element={<NavigateF />} />
+					<Route path="/contact" element={<Contact />}>
+						<Route path="company" element={<Company />} />
+						<Route path="ourEmployees" element={<OurEmployees />} />
+						<Route path="others" element={<Others />} />
+					</Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
