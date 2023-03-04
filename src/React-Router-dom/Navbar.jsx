@@ -19,6 +19,9 @@ const Navbar1 = () => {
 				<NavLink className="link1" to="/filter">
 					Filter
 				</NavLink>
+				<NavLink className="link1" to="/login">
+					Login
+				</NavLink>
 			</header>
 		</div>
 	);
