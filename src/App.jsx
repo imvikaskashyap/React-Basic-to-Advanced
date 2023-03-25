@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import App1 from "./Context Api/App";
+import HomeContainer from "./containers/HomeContainer";
 
 const App = () => {
 	return (
 		<div className="app">
-			<App1 />
+			<HomeContainer />
 		</div>
 	);
 };
