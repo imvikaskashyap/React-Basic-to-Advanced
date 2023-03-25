@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Params from "./React-Router-dom/Params";
+import App1 from "./Context Api/App";
 
 const App = () => {
 	return (
-		<div>
-			<Params />
+		<div className="app">
+			<App1 />
 		</div>
 	);
 };

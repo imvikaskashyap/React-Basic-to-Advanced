@@ -22,3 +22,4 @@ export default Contact;
 // 1 hi page ke andar dusra page show karna nested routing hota hai.
 // we can make many nested routing inside a page.
 // we must use Outlet for nested routing.
+// we dont use "/" in nested routing
